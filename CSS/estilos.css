@@ -120,6 +120,16 @@ footer{
     background-color: transparent; 
     color: #FFF; 
 }
+/* Estilo para select paises */
+.paises{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid white; 
+    border-radius: 5px;
+    background-color: transparent; 
+    color:#727171 ; 
+}
 
 /* Estilo para el botón de enviar */
 .formulario-contacto button[type="submit"] {
