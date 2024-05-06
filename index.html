@@ -1,0 +1,110 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zapatilleria</title>
+    <link rel="stylesheet" href="/CSS/estilos.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <!-- Imagen del logotipo -->
+            <img src="/IMG/logoG4.png" alt="Logotipo">
+            <div>
+                <!-- items de navegacion -->
+                <a href="#inicio">Inicio</a>
+                <!-- item desplegable -->
+                <div class="desplegable">
+                    <!-- Boton que se desplega al pasar el mouse -->
+                    <button class="desplegableBtn">Modelos</button>
+                    <div class="desplegableContenido">
+                        <a href="#hombre">Hombre</a>
+                        <a href="#mujer">Mujer</a>
+                        <a href="#niño">Niño</a>
+                    </div>
+                </div> 
+                <a href="#contacto">Contacto</a>
+            </div>
+        </div>
+
+    </header>
+    <main>
+
+    </main>
+    <footer>
+        <!-- footer primera seccion -->
+        <div class="formulario">
+            <div class="formulario-contacto">
+                <form id="formulario-contacto" onsubmit="return validarFormulario()">
+                    <h3>Formulario de Contacto</h3>
+                    <input type="text" id="nombre" placeholder="Nombre" required>
+                    <input type="email" id="correo" placeholder="Correo electrónico" required>
+                    <textarea id="mensaje" placeholder="Mensaje" rows="4" required></textarea>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </div>
+        
+        <!-- footer segunda seccion -->
+        <div class="footer-arriba">
+            <!-- Sector izquierdo de footer -->
+            <div class="footer-izquierdo">
+                <div class="footer-section">
+                    <h3>Metodos de pago</h3>
+                    <!-- Iconos de medios de pago -->
+                    <img src="/IMG/american-express.png" alt="Tarjeta 1">
+                    <img src="/IMG/diners-club_196548.png" alt="Tarjeta 2">
+                    <img src="/IMG/mastercard.png" alt="Tarjeta 3">
+                    <img src="/IMG/visa.png" alt="Tarjeta 4">
+                    <img src="/IMG/naranja.png" alt="Tarjeta 5">
+                    <div class="iconosDiferenciales">
+                        <img src="/IMG/mercadopago.png" alt="Tarjeta 6">
+                        <img src="/IMG/rapipago.png" alt="Tarjeta 7">
+                        <img src="/IMG/efectivo.png" alt="Tarjeta 8">
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Medios de envío</h3>
+                    <!-- iconos de  medios de envío -->
+                    <img src="/IMG/correo-argentino.png" alt="Envío 1">
+                    <img src="/IMG/personalizado.png" alt="Envío 2">
+                    <img src="/IMG/acordar.png" alt="Envío 3">
+                </div>
+            </div>
+            <!-- Sector centro de footer -->
+            <div class="footer-centro">
+                <div class="footer-section">
+                    <!-- redes sociales -->
+                    <h3>Nuestras Redes sociales</h3>
+                    <img src="/IMG/twitter_2504947.png" alt="redes 1">
+                    <img src="/IMG/facebook_2504903.png" alt="redes 2">
+                    <img src="/IMG/instagram_2111463.png" alt="redes 3">
+                    
+                </div>
+            </div>
+            <!-- Sector derecho de footer -->
+            <div class="footer-derecho">
+                <div class="footer-section">
+                    <!--enlaces a contactos -->
+                    <h3>Contactos</h3>
+                    <img src="/IMG/whatsapp_2504957.png" alt="">
+                    <img src="/IMG/email_726623.png" alt="">
+                    <img src="/IMG/telegram_2504941.png" alt="">    
+                </div>
+            </div>   
+        </div>
+        <!-- Sector final de footer -->
+        <div class="firma-footer">
+            <p>Pagina creada por grupo 4</p>
+            <div class="iconos-firma">
+                <img src="/IMG/DATAWEB.jpg" alt="">
+            </div>
+
+        </div>
+        
+        
+    </footer>
+    <script src="/JS/index.js"></script>
+</body>
+</html>
