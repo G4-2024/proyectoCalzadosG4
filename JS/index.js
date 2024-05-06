@@ -1,10 +1,10 @@
-// En tu archivo validacion.js
+// archivo validacion.js
 function validarFormulario() {
     const nombre = document.getElementById('nombre').value;
     const correo = document.getElementById('correo').value;
     const mensaje = document.getElementById('mensaje').value;
 
-    // Validación básica (puedes agregar más condiciones según tus necesidades)
+    // Validación básica
     if (nombre.trim() === '' || correo.trim() === '' || mensaje.trim() === '') {
         alert('Por favor, completa todos los campos.');
         return false;
@@ -17,8 +17,6 @@ function validarFormulario() {
         return false;
     }
 
-    // Aquí puedes enviar el formulario o realizar otras acciones
-    // (por ejemplo, enviar los datos a un servidor mediante AJAX).
 
     return true;
 }
