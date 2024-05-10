@@ -3,17 +3,20 @@
     padding: 0;
 }
 header{
+    font-family: "Reddit Sans Condensed", sans-serif;/* fuente de google fonts */
     background-color: rgb(245, 171, 171);
     width: 100%;
     height: auto;
 }
 main{
+    font-family: "Reddit Sans Condensed", sans-serif;/* fuente de gooogle fonts */
     background-color: rgb(136, 136, 134);
     width: 100%;
-    height: 80%;
+    height:auto;
     
 }
 footer{
+    font-family: "Reddit Sans Condensed", sans-serif;/* fuente de google fonts */
     background-color: black;
     width: 100%;
     height: auto;
@@ -91,6 +94,54 @@ footer{
 .desplegableContenido a:hover {
     background-color: #d3d3d3; 
 }
+/* ==========Main======================== */
+/* Ofertas del dia */
+.ofertas{
+    background-color: burlywood;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.producto {
+    width: calc(100% / 6); /* Ancho para 6 imágenes por fila */
+    border: 1px solid #ccc; /* Borde del recuadro */
+    padding: 10px; /* Espaciado interno del recuadro */
+    text-align: center; /* Alineación del contenido al centro */
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
+}
+
+.producto img {
+    max-width: 100%; /* Asegura que la imagen no se salga del recuadro */
+    height: 70%; /* Ajusta la altura de la imagen de forma proporcional */
+}
+
+.precio {
+    margin-top: 10px; /* Espaciado superior entre la imagen y el precio */
+    font-weight: bold; /* Texto en negrita para el precio */
+}
+
+/* Calzado niño*/
+.calzado-niño{
+    background-color: aquamarine;
+    width: 100%;
+    height: 50%;
+}
+
+/* Calzado mujer */
+.calzado-mujer{
+    background-color: cadetblue;
+    width: 100%;
+    height: 50%;
+}
+
+/* Calzado hombre */
+.calzado-hombre{
+    background-color: coral;
+    width: 100%;
+    height: 50%;
+}
+
 /* ==========Footer======================== */
 /* footer primera seccion */
 .formulario {
@@ -111,6 +162,7 @@ footer{
 /* Estilo para los campos de entrada */
 .formulario-contacto input[type="text"],
 .formulario-contacto input[type="email"],
+.formulario-contacto input[type="tel"],
 .formulario-contacto textarea {
     width: 100%;
     padding: 10px;
