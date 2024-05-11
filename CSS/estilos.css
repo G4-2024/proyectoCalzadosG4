@@ -96,6 +96,15 @@ footer{
 }
 /* ==========Main======================== */
 /* Ofertas del dia */
+.contenedor-titulo{
+    background-color: #ddd;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* contenedor de ofertas */
 .ofertas{
     background-color: burlywood;
     width: 100%;
@@ -103,22 +112,48 @@ footer{
     display: flex;
     flex-wrap: wrap;
 }
+/* titulo oferta/animaciom */
+.titulo-oferta {
+    color: black;
+    animation:cambiaColor 3s infinite ;
+}
+/* transicion de colores en la animacion */
+@keyframes cambiaColor {
+    0% {
+        color: black;
+    }
+    25%{
+        color: #727171;
+    }
+    50% {
+        color: yellow;
+    }
+    75%{
+        color: #727171;
+    }
+    100% {
+        color: black;
+    }
+}
+
+
+/*contenedor de las imagenes dividido en 6 como limite maximo */
 .producto {
-    width: calc(100% / 6); /* Ancho para 6 imágenes por fila */
-    border: 1px solid #ccc; /* Borde del recuadro */
-    padding: 10px; /* Espaciado interno del recuadro */
-    text-align: center; /* Alineación del contenido al centro */
-    box-sizing: border-box; /* Incluye el padding en el ancho total */
+    width: calc(100% / 6); 
+    border: 1px solid #ccc; 
+    padding: 10px; 
+    text-align: center; 
+    box-sizing: border-box; 
 }
-
+/*tamaño imagenes */
 .producto img {
-    max-width: 100%; /* Asegura que la imagen no se salga del recuadro */
-    height: 70%; /* Ajusta la altura de la imagen de forma proporcional */
+    max-width: 100%; 
+    height: 60%; 
 }
-
+/*precio */
 .precio {
-    margin-top: 10px; /* Espaciado superior entre la imagen y el precio */
-    font-weight: bold; /* Texto en negrita para el precio */
+    margin-top: 10px; 
+    font-weight: bold; 
 }
 
 /* Calzado niño*/
@@ -144,12 +179,33 @@ footer{
 
 /* ==========Footer======================== */
 /* footer primera seccion */
-.formulario {
+.primera-seccion{
+    background-color: #727171;
     width: 100%;
+    height: auto;
+    display: flex;
+    padding: 5px;
+}
+/* Subdivision margen derecha del formulario dentro del div */
+.formulario {
+    flex: 1;
     height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+/* Subdivision margen izquierda de ubicacion geografica dentro del div */
+.ubicacion-geografica{
+    flex: 1;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    text-align: center;
+}
+.ubicacion-geografica h3{
+    color: aliceblue;
+    margin-bottom: 20px;
 }
 /* Estilo para el formulario de contacto */
 .formulario-contacto {

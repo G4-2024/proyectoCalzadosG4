@@ -33,7 +33,14 @@
 
     </header>
     <main>
+        <!-- seccion ofertas -->
+        <div class="contenedor-titulo">
+            <h1 class="titulo-oferta">Ofertas del mes</h1>
+        </div>
+        
+        <!-- contenedor de los productos de oferta -->
         <div class="ofertas">
+            
             <div class="producto">
                 <img src="/proyectoCalzadosG4/IMG/nike oferta 1.jpg" alt="Zapatillas">
                 <h3>Zapatilla nike oferta</h3>
@@ -119,12 +126,30 @@
                 <p class="condicion-stock">*hasta agotar stock</p>
             </div> 
         </div>
+
+        <!-- seccion niños -->
+        <div class="contenedor-titulo">
+            <h1 class="titulo-calzados">calzado niños</h1>
+        </div>
+        <!-- contenedor de los productos de niños -->
         <div class="calzado-niño">
 
         </div>
+
+        <!-- seccion mujer -->
+        <div class="contenedor-titulo">
+            <h1 class="titulo-calzado">Calzado mujer</h1>
+        </div>
+        <!-- contenedor de los productos de mujer -->
         <div class="calzado-mujer">
 
         </div>
+
+        <!-- seccion hombres -->
+        <div class="contenedor-titulo">
+            <h1 class="titulo-calzado">Calzado hombre</h1>
+        </div>
+        <!-- contenedor de los productos de hombre -->
         <div class="calzado-hombre">
 
         </div>
@@ -132,23 +157,37 @@
     </main>
     <footer>
         <!-- footer primera seccion -->
-        <div class="formulario">
-            <div class="formulario-contacto">
-                <form id="formulario-contacto" onsubmit="return validarFormulario()">
-                    <h3>Formulario de Contacto</h3>
-                    <input type="text" id="nombre" placeholder="Nombre" required>
-                    <input type="email" id="correo" placeholder="Correo electrónico" required>
-                    <input type="tel" id="telefono" placeholder="Teléfono" required> 
-                    <select class="paises" id="pais" name="pais">
-                        <option value="Argentina">Argentina</option>
-                        <option value="Peru">Peru</option>
-                        <option value="Chile">Chile</option>
-                    </select>
-                    <textarea id="mensaje" placeholder="Mensaje" rows="4" required></textarea>
-                    <button type="submit">Enviar</button>
-                </form>
+        <div class="primera-seccion">
+            <div class="formulario">
+                <div class="formulario-contacto">
+                    <form id="formulario-contacto" onsubmit="return validarFormulario()">
+                        <h3>Formulario de Contacto</h3>
+                        <input type="text" id="nombre" placeholder="Nombre" required>
+                        <input type="email" id="correo" placeholder="Correo electrónico" required>
+                        <input type="tel" id="telefono" placeholder="Teléfono" required> 
+                        <select class="paises" id="pais" name="pais">
+                            <option value="Argentina">Argentina</option>
+                            <option value="Peru">Peru</option>
+                            <option value="Chile">Chile</option>
+                        </select>
+                        <textarea id="mensaje" placeholder="Mensaje" rows="4" required></textarea>
+                        <button type="submit">Enviar</button>
+                    </form>
+                </div>
             </div>
+            <div class="ubicacion-geografica">
+                <div>
+                    <h3>Nuestra ubicacion</h3>
+                </div>
+                <div class="mapa">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12710878.030809263!2d-86.52206745!3d-38.94130619999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x960a33c1f5ef4069%3A0xb5c2627193794e55!2sDexter!5e0!3m2!1ses-419!2sar!4v1715442635100!5m2!1ses-419!2sar" width="300" height="300" style="border: 10;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+            </div>
+
         </div>
+        
+        
         
         
         <!-- footer segunda seccion -->
@@ -201,7 +240,7 @@
         </div>
         <!-- Sector final de footer -->
         <div class="firma-footer">
-            <p>Pagina creada por grupo 4</p>
+            <p>Pagina creada por grupo 2</p>
             <div class="iconos-firma">
                 <img src="/proyectoCalzadosG4/IMG/DATAWEB.jpg" alt="">
             </div>
