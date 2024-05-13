@@ -4,7 +4,7 @@
 }
 header{
     font-family: "Reddit Sans Condensed", sans-serif;/* fuente de google fonts */
-    background-color: rgb(245, 171, 171);
+    background-color: rgb(245, 243, 243);
     width: 100%;
     height: auto;
 }
@@ -12,8 +12,7 @@ main{
     font-family: "Reddit Sans Condensed", sans-serif;/* fuente de gooogle fonts */
     background-color: rgb(136, 136, 134);
     width: 100%;
-    height:auto;
-    
+    height:auto;    
 }
 footer{
     font-family: "Reddit Sans Condensed", sans-serif;/* fuente de google fonts */
@@ -24,10 +23,14 @@ footer{
 /* ==========Header======================== */
 /* Estilo para la barra de navegación */
 .navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #0a0a0a;
+    z-index: 1000;
 }
 
 /* Estilo para el logotipo */
@@ -35,12 +38,60 @@ footer{
     height: 80px;;
     margin-left: 80px;
 }
+/* Animacion de envio gratis*/
+.contenedor-envios{
+    position: relative;
+    width: 30%;
+    height: auto;   
+}
+
+.envios-gratis{
+    color: aliceblue;
+    font-size:1.2rem;
+    animation:cambiaColor 3s infinite ;
+}
+/* imagen - animaciones*/
+.contenedor-envios img{
+    width: 40px;  
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: mover 4s infinite linear;
+}
+@keyframes mover {
+    0% {
+        left: 50%; 
+    }
+    100% {
+        left: calc(100% - 100px); 
+    }
+}
+@keyframes cambiaColor {
+    0% {
+        color: black;
+    }
+    25%{
+        color: #727171;
+    }
+    50% {
+        color: yellow;
+    }
+    75%{
+        color: #727171;
+    }
+    100% {
+        color: black;
+    }
+}
+
 
 /* Estilo para los enlaces de la barra de navegación */
 .navbar a, .desplegable {
+    font-size: 1.5rem;
     color: #f2f2f2;
     text-align: center;
-    padding: 14px 16px;
+    padding: 1rem;
     text-decoration: none;
 }
 
@@ -52,11 +103,11 @@ footer{
 
 /* Estilo para el botón de la lista desplegable */
 .desplegable .desplegableBtn {
-    font-size: 16px;  
+    font-size: 1.5rem;  
     border: none;
     outline: none;
     color: white;
-    padding: 14px 16px;
+    padding: 1rem;
     background-color: inherit;
     font-family: inherit;
     margin: 0;
@@ -79,7 +130,7 @@ footer{
 /* Estilo para los enlaces de la lista desplegable */
 .desplegableContenido a {
     color: black;
-    padding: 12px 16px;
+    padding: 2vh;
     text-decoration: none;
     display: block;
     text-align: left;
@@ -103,6 +154,7 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 8%;
 }
 /* contenedor de ofertas */
 .contenedor-ofertas {
@@ -140,15 +192,21 @@ footer{
 /*contenedor de las imagenes dividido en 4 como limite maximo */
 .producto {
     width: calc(100% / 4); 
-    border: 1px solid #ccc; 
+    border: 10px solid #ccc; 
     padding: 10px; 
     text-align: center; 
-    box-sizing: border-box; 
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+    
+}
+/*rotacion y perspectiva del div */
+.producto:hover {
+    transform: perspective(500px) rotateX(3deg);
 }
 /*tamaño imagenes */
 .producto img {
     max-width: 100%; 
-    height: 50%; 
+    height:70%; 
 }
 /*precio */
 .precio {
@@ -186,11 +244,11 @@ footer{
 /* ==========Footer======================== */
 /* footer primera seccion */
 .primera-seccion{
-    background-color: #727171;
+    background-color: #686767;
     width: 100%;
     height: auto;
     display: flex;
-    padding: 5px;
+    padding: 0px;
 }
 /* Subdivision margen derecha del formulario dentro del div */
 .formulario {
@@ -313,3 +371,128 @@ footer{
     width: 30px;  
     height: auto;
 }
+/*==========================medias Q===========================*/
+
+    /* =========header==========*/
+    /* Estilo para pantallas menores a 600px */
+@media (min-width: 1px) and (max-width: 600px) {
+    /* Estilo para el logotipo en pantallas pequeñas */
+    .navbar img {
+        height: 60px;
+        margin-left: 10px; /* Reducimos el margen para aprovechar mejor el espacio */
+    }
+
+    /* Estilo para el contenedor de envíos en pantallas pequeñas */
+    .contenedor-envios {
+        display: none; /* Ocultamos el contenedor de envíos en pantallas pequeñas */
+    }
+
+    /* Estilo para los enlaces de la barra de navegación en pantallas pequeñas */
+    .navbar a, .desplegable {
+        font-size: 1rem; /* Reducimos el tamaño del texto */
+    }
+
+    /* Estilo para el botón de la lista desplegable en pantallas pequeñas */
+    .desplegable .desplegableBtn {
+        font-size: 1rem; /* Reducimos el tamaño del texto */
+        padding: 0.5rem; /* Reducimos el padding */
+    }
+
+    /* Estilo para los elementos de la lista desplegable en pantallas pequeñas */
+    .desplegableContenido {
+        min-width: 120px; /* Reducimos el ancho mínimo */
+    }
+
+    /* Estilo para los enlaces de la lista desplegable en pantallas pequeñas */
+    .desplegableContenido a {
+        padding: 1vh; /* Reducimos el padding */
+    }
+    /* =========main==========*/
+    main{
+        width: 100%;
+        padding-top: 15%;
+    }
+    .titulo-oferta, .titulo-calzados{
+        font-size: 25px;
+    }
+    .contenedor-titulo{
+        padding-top: 15%;
+    }
+    .producto h3{
+        font-size: 15px;
+    }
+    .producto h4{
+        font-size: 13px;
+    }
+    .producto p{
+        font-size: 10px;
+    }
+    .producto {
+        width: calc(100% / 2); 
+        border: 10px solid #ccc; 
+        padding: 10px; 
+        text-align: center; 
+        box-sizing: border-box;
+        transition: transform 0.3s ease;
+        
+    }
+
+    /* =========footer==========*/
+
+    /* Ajustes para la primera sección del footer */
+    .primera-seccion {
+        flex-direction: column; 
+        align-items: center; 
+        padding-bottom: 10px; 
+    }
+
+    /* Ajustes para el formulario */
+    .formulario {
+        width: 100%; 
+        margin-bottom: 20px; 
+    }
+
+    /* Ajustes para la ubicación geográfica */
+    .ubicacion-geografica {
+        width: 100%; 
+    }
+
+    /* Ajustes para el mapa en pantallas pequeñas */
+    .mapa iframe {
+        width: 70%; 
+        height: auto;
+    }
+
+    /* Ajustes para la segunda sección  */
+    .footer-arriba {
+        flex-direction: column; 
+        padding: 20px; 
+    }
+
+    /* Ajustes para los iconos de medios de pago  */
+    .footer-section img {
+        width: 40px; 
+        margin: 5px; 
+    }
+
+    /* Ajustes para los iconos de redes sociales  */
+    .footer-centro img {
+        width: 30px; 
+        margin: 5px; 
+    }
+
+    /* Ajustes para los iconos de contactos  */
+    .footer-derecho img {
+        width: 30px; 
+        margin: 5px; 
+    }
+
+    /* Ajustes para la firma del footer  */
+    .firma-footer p {
+        font-size: 12px; 
+        text-align: center; 
+    }
+
+}
+   
+
