@@ -12,9 +12,7 @@ CREATE TABLE usuario (
     us_user VARCHAR(255),
     us_apellido VARCHAR(255),
     us_correo VARCHAR(255),
-    us_telefono VARCHAR(20),
-    ad_id INT,
-    FOREIGN KEY (ad_id) REFERENCES administrador(ad_id)
+    us_telefono VARCHAR(20)
 );
 
 CREATE TABLE producto (
