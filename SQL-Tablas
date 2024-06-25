@@ -1,0 +1,39 @@
+
+CREATE TABLE administrador (
+    ad_id INT PRIMARY KEY,
+    ad_nombre VARCHAR(255),
+    ad_contrasena VARCHAR(255),
+    ad_correo VARCHAR(255),
+    ad_telefono VARCHAR(20)
+);
+
+CREATE TABLE usuario (
+    us_id INT PRIMARY KEY,
+    us_nombre VARCHAR(255),
+    us_apellido VARCHAR(255),
+    us_correo VARCHAR(255),
+    us_telefono VARCHAR(20),
+    ad_id INT,
+    FOREIGN KEY (ad_id) REFERENCES administrador(ad_id)
+);
+
+CREATE TABLE producto (
+    p_id INT PRIMARY KEY,
+    p_nombre VARCHAR(255),
+    p_precio DECIMAL(10, 2),
+    p_codigo VARCHAR(50),
+    p_garantia INT,
+    p_fecha DATE,
+    ad_id INT,
+    FOREIGN KEY (ad_id) REFERENCES administrador(ad_id)
+);
+
+CREATE TABLE pedido (
+    pe_id INT PRIMARY KEY,
+    pe_fecha DATE,
+    p_id INT,
+    us_id INT,
+    pe_cantidad INT,
+    FOREIGN KEY (p_id) REFERENCES producto(p_id),
+    FOREIGN KEY (us_id) REFERENCES usuario(us_id)
+);
